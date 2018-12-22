@@ -6,15 +6,17 @@ textarea {
   resize: none;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
 .link-decoration {
   text-decoration: none;
+  color: white;
 }
 
-.top-menu .collapse .navbar-collapse .navbar {
+.link-decoration:visited, .link-decoration:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.top-menu .navbar-collapse {
   border: 0;
 }
 
@@ -28,6 +30,10 @@ textarea {
 
 .top-menu a.navbar-right:hover {
   background-color: #12579a;
+}
+
+.top-menu .navbar-toggle {
+  border: 0;
 }
 
 .top-menu .caret {
@@ -195,6 +201,86 @@ textarea {
   background-size: cover;
   color: white;
   padding: 80px;
+}
+
+.experts .modal-body {
+  padding: 0;
+}
+
+.experts .modal-header {
+  position: relative;
+  padding: 0;
+}
+
+.experts .modal-header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  border: 2px solid #12579a;
+}
+
+.experts .modal-image {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .experts .modal-image {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.experts .modal-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .experts .modal-text {
+    display: block;
+    margin: 20px auto 0;
+    width: 100%;
+  }
+}
+
+.experts .modal-content {
+  border-radius: 0;
+  padding: 40px;
+}
+
+.experts .modal-header .close {
+  margin-top: -16px;
+}
+
+.experts .close {
+  color: red;
+}
+
+.experts .close:hover {
+  color: red;
+}
+
+.experts h4 {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.experts h5 {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.experts .with-check:before {
+  content: '\2714';
+  display: inline-block;
+  margin-right: 10px;
+  color: red;
 }
 
 @media screen and (min-width: 320px) and (max-width: 640px) {
