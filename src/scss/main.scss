@@ -10,8 +10,19 @@ textarea {
   text-decoration: none;
   color: white;
 
-  &:visited,
   &:hover {
+    text-decoration: none;
+    color: rgb(18,87,154);
+  }
+
+  &:visited {
+    text-decoration: none;
+    color: white;
+  }
+
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
     text-decoration: none;
     color: white;
   }
@@ -195,6 +206,10 @@ textarea {
   color: white;
   padding: 80px;
 
+  @media screen and (min-width: 320px ) and (max-width: 640px) {
+    padding: 20px 10px 60px;
+  }
+
   & .modal-body {
     padding: 0;
   }
@@ -271,10 +286,6 @@ textarea {
     };
   }
 
-  @media screen and (min-width: 320px ) and (max-width: 640px) {
-    padding: 20px 10px 30px;
-  }
-
   & h2 {
     margin-top: 0;
     margin-bottom: 40px;
@@ -289,8 +300,7 @@ textarea {
     }    
   }
 
-  & h3 {
-    
+  & h3 {    
     &:before {
       content: '';
       display: block;
@@ -315,11 +325,14 @@ textarea {
 
   & .slick-prev {
     top: 7%;
+    width: 30px;
+    height: 30px;
 
     @media screen and (min-width: 320px ) and (max-width: 640px) {
-      margin-top: 10px;
-      top: 90%;
+      margin-top: 30px;
+      top: 95%;
       left: 40%;
+      z-index: 2;
     }
 
     &:before {
@@ -337,11 +350,14 @@ textarea {
 
    & .slick-next {
     top: 7%;
+    width: 30px;
+    height: 30px;
 
     @media screen and (min-width: 320px ) and (max-width: 640px) {
-        margin-top: 10px;
-        top: 90%;
+        margin-top: 30px;
+        top: 95%;
         right: 40%;
+        z-index: 2;
     }
 
      &:before {
@@ -393,11 +409,12 @@ textarea {
       }
 
       &:hover {
-        height: 100%;
+        height: 650px;
         cursor: pointer;
+        transition: 1s;
           
           .roller-rows {
-            max-height: 100%;
+            max-height: 650px;
           }   
       }
 
