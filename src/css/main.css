@@ -14,6 +14,10 @@ textarea {
   text-decoration: none;
 }
 
+.top-menu .collapse .navbar-collapse .navbar {
+  border: 0;
+}
+
 .top-menu a.navbar-right {
   color: white;
   padding: 30px 20px;
@@ -134,9 +138,29 @@ textarea {
   color: white;
 }
 
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .top-poster {
+    padding: 60px 10px 20px;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+  .top-poster {
+    padding: 60px 10px 20px;
+  }
+}
+
 .top-poster h1 {
   line-height: 50px;
   font-weight: bold;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .top-poster h1 {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 70px;
+  }
 }
 
 .top-poster p {
@@ -144,9 +168,15 @@ textarea {
   margin-bottom: 100px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .top-poster p {
+    display: none;
+  }
+}
+
 .top-poster .btn {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   padding: 20px 10px;
 }
 
