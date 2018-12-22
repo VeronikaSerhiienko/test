@@ -139,8 +139,8 @@
     </div>
 
     <div class="single-item"> <!-- шапка -->
-      <div class="col-sm-6 col-xs-12"><!--  слайд1 -->
-        <div class="img-fluid">
+      <div class=""><!--  слайд1 -->
+        <div class="">
           <img src="images/img/speaker1.jpg">
           <div class="caption post-content">
             <h3>Валерий Патонич</h3>
@@ -148,8 +148,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-xs-12"><!--  слайд2 -->
-        <div class="img-fluid">
+      <div class=""><!--  слайд2 -->
+        <div class="">
           <img src="images/img/speaker2.jpg">
           <div class="caption post-content">
             <h3>Волков Владимир</h3>
@@ -157,8 +157,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-xs-12"><!--  слайд3 -->
-        <div class="img-fluid">
+      <div class=""><!--  слайд3 -->
+        <div class="">
           <img src="images/img/speaker3.jpg">
           <div class="caption post-content">
             <h3>Валерий Патонич</h3>
@@ -166,8 +166,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-xs-12"><!--  слайд3 -->
-        <div class="img-fluid">
+      <div class=""><!--  слайд3 -->
+        <div class="">
           <img src="images/img/speaker3.jpg">
           <div class="caption post-content">
             <h3>Валерий Патонич</h3>
@@ -175,8 +175,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-xs-12"><!--  слайд4 -->
-        <div class="img-fluid">
+      <div class=""><!--  слайд4 -->
+        <div class="">
           <img src="images/img/speaker4.jpg">
           <div class="caption post-content">
             <h3>Валерий Патонич</h3>
@@ -204,26 +204,30 @@
                 <input type="email" class="form-control" id="InputEmeil" placeholder="Ваш email">
               </div>
             </div>
-            <div class="row hidden-xs">
-              <div class="col-sm-6">
-                <input type="text" class="form-control" id="InputJobPlace" placeholder="Место работы">
-              </div>
-              <div class="col-sm-6">
-                <input type="text" class="form-control" id="InputJobPosition" placeholder="Должность">
+            <div class="roller">
+              <div class="roller-rows">
+                <div class="row"> <!-- другий ряд -->
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="InputJobPlace" placeholder="Место работы">
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="InputJobPosition" placeholder="Должность">
+                  </div>
+                </div>
+                <div class="row"><!-- третій ряд -->
+                  <div class="col-sm-4">
+                    <textarea class="form-control" rows="7" placeholder="Интерес к конференции" name="conf-interest" id="conf-interest"></textarea>
+                  </div>
+                  <div class="col-sm-4">
+                    <textarea class="form-control" rows="7" placeholder="Интерес к партнерской программе" name="partner-interest" id="partner-interest"></textarea>
+                  </div>
+                  <div class="col-sm-4"> 
+                    <textarea class="form-control" placeholder="Опыт работы с РПП" rows="7" name="work-exp" id="work-exp"></textarea>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="row hidden-xs">
-              <div class="col-sm-4">
-                <textarea class="form-control" rows="7" placeholder="Интерес к конференции" name="conf-interest" id="conf-interest"></textarea>
-              </div>
-              <div class="col-sm-4">
-                <textarea class="form-control" rows="7" placeholder="Интерес к партнерской программе" name="partner-interest" id="partner-interest"></textarea>
-              </div>
-              <div class="col-sm-4">
-                <textarea class="form-control" placeholder="Опыт работы с РПП" rows="7" name="work-exp" id="work-exp"></textarea>
-              </div>
-            </div>
-            <div class="row">
+            <div class="row"> <!-- четвертий ряд -->
               <div class="col-sm-4 col-sm-offset-4">
                 <input class="btn btn-default" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ" name="submit">
             </div>
@@ -240,13 +244,34 @@
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="slick/slick.min.js"></script>
 <script>
-   $('.single-item').slick({
+  $('.single-item').slick({
     dots: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-});
+    arrows: false,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [ {
+        breakpoint: 960,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 640,
+            settings: {
+            slidesToShow: 2,
+          }
+          },
+          {
+            breakpoint: 320,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+    ]
+  });
 </script>
 <script>
   $('.single').slick({

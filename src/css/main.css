@@ -57,80 +57,7 @@ textarea {
   background-color: #12579a;
 }
 
-/*speakers starts*/
-.speakers {
-  padding: 80px;
-}
-
-.speakers h2 {
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-
-.speakers .slick-prev:before,
-.speakers .slick-next:before {
-  display: none;
-}
-
-.speakers .slick-dots {
-  bottom: -50px;
-}
-
-.speakers .slick-dots li button:before {
-  width: 15px;
-  height: 2px;
-  content: '';
-  border: 1px solid red;
-  text-align: center;
-}
-
-.speakers .slick-dots li.slick-active button:before {
-  opacity: .75;
-  color: red;
-  width: 25px;
-}
-
-.img-fluid {
-  position: relative;
-  cursor: pointer;
-  max-width: 235px;
-}
-
-.caption {
-  display: none;
-  animation-name: background;
-  animation-duration: 1s;
-  animation-fill-mode: backwards;
-  animation-iteration-count: 1;
-  width: 100%;
-}
-
-.img-fluid:hover > .caption {
-  display: block;
-  background-color: rgba(18, 87, 154, 0.8);
-  color: white;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.slick-dots {
-  bottom: -40px;
-}
-
-@keyframes background {
-  0% {
-    opacity: 0;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  100% {
-    opacity: 1;
-    background-color: rgba(18, 87, 154, 0.8);
-  }
-}
-
-/*speakers ends*/
+/* top-poster starts*/
 .top-poster {
   background: url("../images/bg/top-poster.jpg") no-repeat;
   background-size: cover;
@@ -144,9 +71,15 @@ textarea {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 960px) {
+@media screen and (min-width: 320px) and (max-width: 640px) {
   .top-poster {
     padding: 60px 10px 90px;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+  .top-poster {
+    padding: 60px 10px 220px;
   }
 }
 
@@ -186,6 +119,76 @@ textarea {
   padding: 20px 10px;
 }
 
+/* top-poster ends*/
+/*speakers starts*/
+.speakers {
+  padding: 80px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .speakers {
+    padding: 60px 30px;
+  }
+}
+
+.speakers h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.speakers .slick-dots {
+  bottom: -50px;
+}
+
+.speakers .slick-dots li button:before {
+  width: 15px;
+  height: 2px;
+  content: '';
+  border: 1px solid red;
+  text-align: center;
+}
+
+.speakers .slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: red;
+  width: 25px;
+}
+
+.caption {
+  display: none;
+  animation-name: background;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  width: 100%;
+}
+
+.img-fluid:hover > .caption {
+  display: block;
+  background-color: rgba(18, 87, 154, 0.8);
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.slick-dots {
+  bottom: -40px;
+}
+
+@keyframes background {
+  0% {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    opacity: 1;
+    background-color: rgba(18, 87, 154, 0.8);
+  }
+}
+
+/*speakers ends*/
 /*experts starts*/
 .experts {
   background: url("../images/bg/experts.jpg") no-repeat;
@@ -291,10 +294,58 @@ textarea {
   padding: 80px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .registration-form {
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 926px) {
+  .registration-form .roller {
+    position: relative;
+    height: 1px;
+    margin-bottom: 50px;
+    transition: 1s;
+  }
+  .registration-form .roller:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid white;
+    cursor: pointer;
+  }
+  .registration-form .roller:hover {
+    height: 100%;
+    cursor: pointer;
+  }
+  .registration-form .roller:hover .roller-rows {
+    max-height: 100%;
+  }
+  .registration-form .roller:hover::after {
+    transition: 0.5s;
+    bottom: 0;
+    border-top: 0;
+    border-bottom: 10px solid grey;
+  }
+  .registration-form .roller .roller-rows {
+    max-height: 1px;
+    overflow: hidden;
+  }
+}
+
 .registration-form h2 {
   color: white;
   margin-bottom: 40px;
   font-size: 34px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .registration-form h2 {
+    font-size: 28px;
+  }
 }
 
 .form-control {
