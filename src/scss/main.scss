@@ -139,40 +139,45 @@ textarea {
 /*speakers ends*/
 
 
-
+// top-poster starts
 .top-poster {
   background: url('../images/bg/top-poster.jpg') no-repeat;
   background-size: cover;
   padding: 200px;
   color: white;
 
-  @media screen and (min-width: 320px ) and (max-width: 640px) {
-    padding: 60px 10px 20px;
+  & .button-padding {
+    @media screen and (min-width: 500px ) and (max-width: 759px) {
+      padding: 0 120px;
+    }
   }
 
-  @media screen and (min-width: 641px ) and (max-width: 960px) {
-    padding: 60px 10px 20px;
+  @media screen and (min-width: 320px ) and (max-width: 960px) {
+    padding: 60px 10px 90px;
   }
-
 
   & h1 {
     line-height: 50px;
     font-weight: bold;
 
     @media screen and (min-width: 320px ) and (max-width: 640px) {
-    font-size: 24px;
-    line-height: 40px;
-    margin-bottom: 70px;
-  }
+      font-size: 24px;
+      line-height: 40px;
+      margin-bottom: 70px;
+    }
   }
 
   & p {
     font-size: 20px;
-    margin-bottom: 100px ;
+    margin-bottom: 100px;
+
+    @media screen and (min-width: 641px ) and (max-width: 960px) {
+      margin-bottom: 50px;
+    }
 
     @media screen and (min-width: 320px ) and (max-width: 640px) {
-    display: none;
-  }
+      display: none;
+    }
   }
 
   & .btn {
@@ -181,6 +186,8 @@ textarea {
     padding: 20px 10px;
   }
 }
+
+// top-poster ends
 
 /*experts starts*/
 .experts {
@@ -279,7 +286,6 @@ textarea {
     padding: 0 40px;
   }
 }
-
 
 /*experts ends*/
 
