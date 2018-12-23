@@ -26,7 +26,16 @@ a:visited {
   color: red;
 }
 
+.top-menu .menu-elems li a:hover:after {
+  position: relative;
+  content: '';
+  display: block;
+  border: 1px solid red;
+  top: 34px;
+}
+
 .top-menu .menu-elems {
+  position: relative;
   text-align: center;
   padding: 12px;
 }
