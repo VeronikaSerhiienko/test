@@ -6,20 +6,63 @@ textarea {
   resize: none;
 }
 
+a:focus,
+a:visited {
+  outline: 0;
+  outline-offset: 0;
+};
+
+
+
+// @media (min-width: 800px) {
+//     width: auto;
+//     border-top: 0;
+//     box-shadow: none;
+
+//     &.collapse {
+//       display: block !important;
+//       height: auto !important;
+//       padding-bottom: 0; // Override default setting
+//       overflow: visible !important;
+//     }
+
+//     &.in {
+//       overflow-y: visible;
+//     }
+
+//     // Undo the collapse side padding for navbars with containers to ensure
+//     // alignment of right-aligned contents.
+//     .navbar-fixed-top &,
+//     .navbar-static-top &,
+//     .navbar-fixed-bottom & {
+//       padding-left: 0;
+//       padding-right: 0;
+//     }
+//   }
+// }
 
 .top-menu {
 
-//   @media (min-width: 768px) and (max-width: 1000px) {
-//    & .collapse {
-//        display: none !important;
-//    }
-//    & .navbar-toggle {
-//         display: block;
-//     }
-// }
+
+  & .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    background-color: #f8f8f8;
+  }
+
+  & .menu-elems li a {
+    color: rgb(18,87,154);
+    font-size: 16px;
+
+    &:hover {
+      color: red;
+
+
+    };
+  }
 
   & .menu-elems {
     text-align: center;
+    padding: 12px;
   }
 
   & .navbar-collapse {
@@ -27,8 +70,11 @@ textarea {
   }
 
   & .language-list{
-    width: 120px;
+    width: 112px;
     padding: 16px 0;
+  }
+  & .dropdown-menu {
+    min-width: 0;
   }
 
   & li.dropdown .open {
@@ -48,12 +94,12 @@ textarea {
     float: right;
   }
 
-& .logo {
-  display: block;
-  width: 75px;
-  padding-top: 5px;
-  border-top: 2px solid rgb(18,87,154);
-} 
+  & .logo {
+    display: block;
+    width: 75px;
+    padding-top: 5px;
+    border-top: 2px solid rgb(18,87,154);
+  } 
 
   & .navbar-default .navbar-toggle .icon-bar {
     background-color: rgb(18,87,154);
@@ -61,6 +107,12 @@ textarea {
 
   & .navbar-collapse  {
     border: 0;
+    float: right;
+
+    @media (min-width: 972px){
+      float: both;
+    }
+
   }
 
   & a.navbar-right {   
@@ -114,14 +166,14 @@ textarea {
   min-height: 70px;
   border: 1px solid transparent;
   margin-bottom: 0;
+  padding: 0 40px;
+
   @media screen and (min-width: 320px ) and (max-width: 640px) {
     padding: 10px;
   }
 }
 
-.navbar-collapse {
-  float: right;
-}
+
 
 .registration {
   @media screen and (min-width: 320px ) and (max-width: 640px) {
@@ -551,6 +603,10 @@ textarea {
   background-color: rgba(255, 255, 255, 0);
   margin-bottom: 20px;
   border-radius: 0;
+
+    &:focus {
+      outline: 0;
+    };
 
     &::-webkit-input-placeholder { 
       color: white;

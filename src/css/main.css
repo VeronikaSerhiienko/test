@@ -6,8 +6,29 @@ textarea {
   resize: none;
 }
 
+a:focus,
+a:visited {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.top-menu .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  background-color: #f8f8f8;
+}
+
+.top-menu .menu-elems li a {
+  color: #12579a;
+  font-size: 16px;
+}
+
+.top-menu .menu-elems li a:hover {
+  color: red;
+}
+
 .top-menu .menu-elems {
   text-align: center;
+  padding: 12px;
 }
 
 .top-menu .navbar-collapse {
@@ -15,8 +36,12 @@ textarea {
 }
 
 .top-menu .language-list {
-  width: 120px;
+  width: 112px;
   padding: 16px 0;
+}
+
+.top-menu .dropdown-menu {
+  min-width: 0;
 }
 
 .top-menu li.dropdown .open {
@@ -48,6 +73,13 @@ textarea {
 
 .top-menu .navbar-collapse {
   border: 0;
+  float: right;
+}
+
+@media (min-width: 972px) {
+  .top-menu .navbar-collapse {
+    float: both;
+  }
 }
 
 .top-menu a.navbar-right {
@@ -101,16 +133,13 @@ textarea {
   min-height: 70px;
   border: 1px solid transparent;
   margin-bottom: 0;
+  padding: 0 40px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 640px) {
   .navbar {
     padding: 10px;
   }
-}
-
-.navbar-collapse {
-  float: right;
 }
 
 @media screen and (min-width: 320px) and (max-width: 640px) {
@@ -549,6 +578,10 @@ textarea {
   border-radius: 0;
   /* Firefox 19+ */
   /* Firefox 18- */
+}
+
+.form-control:focus {
+  outline: 0;
 }
 
 .form-control::-webkit-input-placeholder {
