@@ -12,6 +12,37 @@ a:visited {
   outline-offset: 0;
 }
 
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar-collapse.collapse {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-header {
+    float: left;
+    width: 100%;
+  }
+}
+
 .top-menu .navbar-nav .open .dropdown-menu {
   position: absolute;
   background-color: #f8f8f8;
@@ -22,16 +53,20 @@ a:visited {
   font-size: 16px;
 }
 
+.top-menu .menu-elems li a:after {
+  position: relative;
+  content: '';
+  display: block;
+  border: 1px solid transparent;
+  top: 32px;
+}
+
 .top-menu .menu-elems li a:hover {
   color: red;
 }
 
 .top-menu .menu-elems li a:hover:after {
-  position: relative;
-  content: '';
-  display: block;
-  border: 1px solid red;
-  top: 34px;
+  border-color: red;
 }
 
 .top-menu .menu-elems {
@@ -46,7 +81,7 @@ a:visited {
 
 .top-menu .language-list {
   width: 112px;
-  padding: 16px 0;
+  padding: 15px 0;
 }
 
 .top-menu .dropdown-menu {
@@ -78,6 +113,10 @@ a:visited {
 
 .top-menu .navbar-default .navbar-toggle .icon-bar {
   background-color: #12579a;
+}
+
+.top-menu .navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #ffffff;
 }
 
 .top-menu .navbar-collapse {
@@ -165,7 +204,7 @@ a:visited {
   color: white;
 }
 
-@media screen and (min-width: 500px) and (max-width: 768px) {
+@media screen and (min-width: 500px) and (max-width: 767px) {
   .top-poster .button-padding {
     padding: 0 120px;
   }
@@ -470,7 +509,7 @@ a:visited {
   .experts .slick-prev {
     margin-top: 30px;
     top: 95%;
-    left: 40%;
+    left: 39%;
     z-index: 2;
   }
 }
@@ -495,7 +534,7 @@ a:visited {
   .experts .slick-next {
     margin-top: 30px;
     top: 95%;
-    right: 40%;
+    right: 39%;
     z-index: 2;
   }
 }
@@ -526,7 +565,7 @@ a:visited {
   padding: 80px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 640px) {
+@media screen and (min-width: 320px) and (max-width: 925px) {
   .registration-form {
     padding: 30px;
   }
@@ -554,9 +593,27 @@ a:visited {
     cursor: pointer;
     transition: 1s;
   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 926px) and (min-width: 768px) and (max-width: 926px) {
+  .registration-form .roller:hover {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 926px) {
   .registration-form .roller:hover .roller-rows {
     max-height: 650px;
   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 926px) and (min-width: 768px) and (max-width: 926px) {
+  .registration-form .roller:hover .roller-rows {
+    max-height: 250px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 926px) {
   .registration-form .roller:hover::after {
     transition: 0.5s;
     bottom: 0;
@@ -616,6 +673,12 @@ a:visited {
   padding: 15px 40px;
   width: 100%;
   transition: 1s;
+}
+
+@media screen and (min-width: 768px) and (max-width: 866px) {
+  .btn {
+    padding: 15px 20px;
+  }
 }
 
 .btn:hover {
