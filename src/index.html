@@ -14,15 +14,13 @@
  <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
    <!--Название сайта и кнопка раскрытия меню для мобильных-->
-      <div class="navbar-header">
-        
-        <a href="#" class="navbar-left">
+      <div class="navbar-header">        
+        <a href="#" class="navbar-left logo">
           <img src="images/bg/logo.png" height="70" alt="logo">
         </a>
-
-        <a href="#" class="text-uppercase navbar-right">регистрация</a>
-        <div class="inline-block">
-          <ul class="nav navbar-nav navbar-right">
+        <a href="#" class="text-uppercase navbar-right registration">регистрация</a>
+        <div class="navbar-right">
+          <ul class="nav navbar-nav language-list">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">English<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -34,7 +32,7 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <button type="button" class="navbar-toggle collapsed navbar-right" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -44,7 +42,7 @@
 
  <!--Само меню-->
       <div class="collapse navbar-collapse navbar" id="bs-example-navbar-collapse-1">
-         <ul class="nav navbar-nav">
+         <ul class="nav navbar-nav menu-elems">
           <li><a href="#">О конференции</a></li>
           <li><a href="#">Расписание</a></li>
           <li><a href="#">Спикеры</a></li>
@@ -209,7 +207,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -222,8 +219,8 @@
 
     <div class="single-item"> <!-- шапка -->
       <div class=""><!--  слайд1 -->
-        <div class="">
-          <img src="images/img/speaker1.jpg">
+        <div class="container-fluid">
+          <img class="img-responsive" src="images/img/speaker1.jpg">
           <div class="caption post-content">
             <h3>Валерий Патонич</h3>
             <p>Психотерапевт</p>
@@ -231,8 +228,8 @@
         </div>
       </div>
       <div class=""><!--  слайд2 -->
-        <div class="">
-          <img src="images/img/speaker2.jpg">
+        <div class="container-fluid">
+          <img class="img-responsive" src="images/img/speaker2.jpg">
           <div class="caption post-content">
             <h3>Волков Владимир</h3>
             <p>Врач-кардиолог,<br>терапевт</p>
@@ -240,17 +237,8 @@
         </div>
       </div>
       <div class=""><!--  слайд3 -->
-        <div class="">
-          <img src="images/img/speaker3.jpg">
-          <div class="caption post-content">
-            <h3>Валерий Патонич</h3>
-            <p>Психотерапевт</p>
-          </div>
-        </div>
-      </div>
-      <div class=""><!--  слайд3 -->
-        <div class="">
-          <img src="images/img/speaker3.jpg">
+        <div class="container-fluid">
+          <img class="img-responsive" src="images/img/speaker3.jpg">
           <div class="caption post-content">
             <h3>Валерий Патонич</h3>
             <p>Психотерапевт</p>
@@ -258,8 +246,17 @@
         </div>
       </div>
       <div class=""><!--  слайд4 -->
-        <div class="">
-          <img src="images/img/speaker4.jpg">
+        <div class="container-fluid">
+          <img class="img-responsive" src="images/img/speaker3.jpg">
+          <div class="caption post-content">
+            <h3>Валерий Патонич</h3>
+            <p>Психотерапевт</p>
+          </div>
+        </div>
+      </div>
+      <div class=""><!--  слайд5 -->
+        <div class="container-fluid">
+          <img class="img-responsive" src="images/img/speaker4.jpg">
           <div class="caption post-content">
             <h3>Валерий Патонич</h3>
             <p>Психотерапевт</p>
@@ -335,19 +332,19 @@
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [ {
-        breakpoint: 960,
+        breakpoint: 1200,
           settings: {
             slidesToShow: 3,
           }
         },
         {
-          breakpoint: 640,
+          breakpoint: 890,
             settings: {
             slidesToShow: 2,
           }
           },
           {
-            breakpoint: 320,
+            breakpoint: 560,
             settings: {
               slidesToShow: 1,
             }

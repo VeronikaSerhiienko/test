@@ -6,26 +6,44 @@ textarea {
   resize: none;
 }
 
-.link-decoration {
-  text-decoration: none;
-  color: white;
+.top-menu .menu-elems {
+  text-align: center;
 }
 
-.link-decoration:hover {
-  text-decoration: none;
-  color: #12579a;
+.top-menu .navbar-collapse {
+  float: none;
 }
 
-.link-decoration:visited {
-  text-decoration: none;
-  color: white;
+.top-menu .language-list {
+  width: 120px;
+  padding: 16px 0;
 }
 
-.link-decoration:focus {
-  outline: 0;
-  outline-offset: 0;
-  text-decoration: none;
-  color: white;
+.top-menu li.dropdown .open {
+  position: absolute;
+}
+
+.top-menu .navbar-nav {
+  margin: 0;
+}
+
+.top-menu .navbar-left {
+  float: left;
+}
+
+.top-menu .navbar-right {
+  float: right;
+}
+
+.top-menu .logo {
+  display: block;
+  width: 75px;
+  padding-top: 5px;
+  border-top: 2px solid #12579a;
+}
+
+.top-menu .navbar-default .navbar-toggle .icon-bar {
+  background-color: #12579a;
 }
 
 .top-menu .navbar-collapse {
@@ -45,7 +63,21 @@ textarea {
 }
 
 .top-menu .navbar-toggle {
+  border-radius: 0;
   border: 0;
+  transition: 1s;
+  padding: 15px 10px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-right: 5px;
+}
+
+.top-menu .navbar-toggle:hover {
+  background-color: #12579a;
+}
+
+.top-menu .navbar-toggle:hover .top-menu .navbar-default .navbar-header .navbar-toggle span.icon-bar {
+  background-color: white;
 }
 
 .top-menu .caret {
@@ -71,19 +103,31 @@ textarea {
   margin-bottom: 0;
 }
 
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #12579a;
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .navbar {
+    padding: 10px;
+  }
+}
+
+.navbar-collapse {
+  float: right;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .registration {
+    display: none;
+  }
 }
 
 /* top-poster starts*/
 .top-poster {
   background: url("../images/bg/top-poster.jpg") no-repeat;
   background-size: cover;
-  padding: 200px;
+  padding: 150px;
   color: white;
 }
 
-@media screen and (min-width: 500px) and (max-width: 759px) {
+@media screen and (min-width: 500px) and (max-width: 768px) {
   .top-poster .button-padding {
     padding: 0 120px;
   }
@@ -97,7 +141,7 @@ textarea {
 
 @media screen and (min-width: 641px) and (max-width: 960px) {
   .top-poster {
-    padding: 60px 10px 220px;
+    padding: 60px 30px 220px;
   }
 }
 
@@ -221,6 +265,28 @@ textarea {
   }
 }
 
+.experts .link-decoration {
+  text-decoration: none;
+  color: white;
+}
+
+.experts .link-decoration:hover {
+  text-decoration: none;
+  color: #12579a;
+}
+
+.experts .link-decoration:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.experts .link-decoration:focus {
+  outline: 0;
+  outline-offset: 0;
+  text-decoration: none;
+  color: white;
+}
+
 .experts .modal-body {
   padding: 0;
 }
@@ -228,6 +294,7 @@ textarea {
 .experts .modal-header {
   position: relative;
   padding: 0;
+  margin-bottom: 10px;
 }
 
 .experts .modal-header:after {
@@ -267,6 +334,14 @@ textarea {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .experts .modal-text {
+    display: inline-block;
+    vertical-align: top;
+    width: 65%;
+  }
+}
+
 .experts .modal-content {
   border-radius: 0;
   padding: 40px;
@@ -278,10 +353,21 @@ textarea {
 
 .experts .close {
   color: red;
+  border: 1px solid grey;
+  padding: 10px 15px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .experts .close {
+    position: absolute;
+    top: -380px;
+    right: -25px;
+  }
 }
 
 .experts .close:hover {
   color: red;
+  border-color: red;
 }
 
 .experts h4 {
@@ -389,6 +475,10 @@ textarea {
   .single {
     padding: 0 40px;
   }
+}
+
+.img-responsive {
+  margin: 0 auto;
 }
 
 /*experts ends*/
