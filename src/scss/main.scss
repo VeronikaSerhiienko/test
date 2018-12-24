@@ -304,9 +304,9 @@ a:visited {
   }
 
   & .slick-dots li.slick-active button:before {
-      opacity: .75;
-      color: red;
-      width: 25px;
+    opacity: .75;
+    color: red;
+    width: 25px;
   }
 }
 
@@ -319,7 +319,7 @@ a:visited {
   width: 100%;
 }
 
-.img-fluid:hover > .caption {
+.img-responsive:hover>.caption {
   display: block;
   background-color: rgba(18,87,154, 0.8);
   color: white;
