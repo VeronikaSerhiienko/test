@@ -26,6 +26,12 @@ a:visited {
 @media (min-width: 768px) {
   .navbar-collapse.collapse {
     display: none!important;
+    border-radius: 0;
+  }
+
+  .navbar-collapse.collapse.in {
+    display: block!important;
+    border-radius: 0;
   }
 }
 
