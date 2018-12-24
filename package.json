@@ -2,7 +2,6 @@
   "name": "test-zibox",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
