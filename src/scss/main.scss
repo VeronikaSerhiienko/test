@@ -427,10 +427,23 @@ a:visited {
     border: 1px solid grey;
     padding: 10px 15px;
 
-    @media screen and (min-width: 320px ) and (max-width: 640px) {
+    @media screen and (min-width: 320px ) and (max-width: 399px) {
+      position: absolute;
+      top: -390px;
+      right: -35px;
+      padding: 5px 10px;    
+    }
+
+    @media screen and (min-width: 400px ) and (max-width: 640px) {
       position: absolute;
       top: -380px;
       right: -25px;    
+    }
+
+    @media screen and (min-width: 641px ) and (max-width: 767px) {
+      position: absolute;
+      top: -15px;
+      right: -40px;    
     }
 
     &:hover {
